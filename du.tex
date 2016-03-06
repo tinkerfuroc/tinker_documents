@@ -53,6 +53,10 @@
 \maketitle
 \end{spacing}
 
+\section{苍新点}
+\subsection{迷之物体识别}
+在采用SRC之前，我本来是通过计算两个矩阵的标准化降采样矩阵的点击来判断相似性；这样做的结果是点积值没有什么实际意义，对于不同的物体相差非常大，因此难以取合适的阈值，所以判断的鲁棒性不高。在换成SRC之后，鲁棒性有了显著的提升，同时速度和存储空间上并没有显著的降低。
+
 \section{末端视觉}
 \subsection{原始图片的获得}
 tk2\_com/com\_firmware的节点arm\_webcam将读取来自于一个640*480分辨率的logitech webcam的图片，并且利用ros的image\_transport将图片包装为一个类型为sensor\_msgs::Image的消息，并且将其以10Hz的频率发布在主题tk2\_com/arm\_cam\_image下，供后序模块读取。
@@ -126,6 +130,7 @@ tk2\_vision/arm\_target\_finder的节点targetfinder将接收tk2\_com/arm\_cam\_
 依次计算残差$r_{i}(\boldsymbol{y}) = ||\boldsymbol{y}-A\delta_{i}(\hat{x_{1}})||_{2}$，其最小值即为我们识别的及诶过。
 
 \paragraph{图片特征提取}
+为了降低$\boldsymbol{y}$的维数，从而加快运算速度，对图片进行特征提取是很有必要的；从数学上可以证明，只要提取的特征向量的维度大于一个O(lgn)的上界，就不会影响\eqref{stable_l1}的解，因此我们直接对图片进行降采样即可。
 
 
 \section{参考文献}
