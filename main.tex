@@ -1,0 +1,38 @@
+\documentclass[a4paper, 12pt, titlepage]{article}
+
+\input{include/base}
+\input{include/font}
+\input{include/commands}
+\input{include/zh}
+
+\begin{document}
+%% 中文习惯是设定首行缩进为2em. 注意此设置一定要在document环境之中, 这可能与\setlength作用范围相关 
+\setlength{\parindent}{2em}
+
+\title{基于立体视觉与末端摄像头的\\机械臂准确抓取系统}
+\author{清华大学第三十四届“挑战杯”\\学生课外学术科技作品竞赛正式文档}
+\date{}
+\maketitle
+
+\section*{摘要}
+
+家庭机器人是机器人发展的一大方向，但目前主流的家庭机器人无法抓取物品，更难以进行生活中其他常见的对物体的操作。\ 本文从机械臂出发，提出并设计实现了一套适用于室内环境的抓取系统，结合立体视觉与末端摄像头，使用针对室内场景优化的视觉算法定位物体、识别物体，并引导机械臂进行准确的抓取。\ 另外，为了增加机械臂的使用范围，我们为机械臂增加升降台与移动底盘，让机械臂能够在室内自由的移动，取放更大范围内的物体。\ 本项目经过大量实验，验证了抓取系统在实际生活场景中的适应能力。
+
+\textbf{关键字：}视觉伺服，物体识别，立体视觉
+
+\newpage
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\include{1}
+
+\include{2}
+
+\include{3}
+
+\bibliographystyle{unsrt}
+\bibliography{bibfile}
+
+\end{document}

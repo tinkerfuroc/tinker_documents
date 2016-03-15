@@ -1,0 +1,96 @@
+
+% Geometry package, setting margin.
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{multicol}
+
+% Enum control.
+\usepackage{enumerate}
+
+% Hyperlink
+\usepackage[
+    pdfstartview=FitH,
+    CJKbookmarks=true,
+    bookmarks=true,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    colorlinks=true,
+    citecolor=black,
+    linkcolor=black,
+    anchorcolor=black,
+    urlcolor=black
+]{hyperref}
+
+% Title format
+\usepackage{titlesec}
+% List of figure, table, etc.
+\usepackage{titletoc}
+% Table control
+\usepackage{booktabs}
+% Appendix control
+\usepackage[title,titletoc,header]{appendix}
+
+% Font size control
+\usepackage{type1cm}
+% Indentation control
+\usepackage{indentfirst}
+\usepackage{changepage}
+
+% Color control
+\usepackage{color,xcolor}
+
+%% AMS LaTeX
+\usepackage{amsmath,amssymb}
+\usepackage{latexsym,textcomp}
+
+%% By Xiao Hanyu
+%% 数学公式中的黑斜体
+% \usepackage{bm}
+
+%% By Xiao Hanyu
+%% 调整公式字体大小：\mathsmaller, \mathlarger
+% \usepackage{relsize}
+
+% graphics
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{url}
+
+% pgf/tikz graph
+\usepackage{pgf,tikz}
+\usetikzlibrary{shapes,automata,snakes,backgrounds,arrows}
+\usetikzlibrary{mindmap}
+
+\usepackage{fancyhdr}
+\pagestyle{plain}
+
+%% By Xiao Hanyu
+%% 有时会出现\headheight too small的warning
+\setlength{\headheight}{15pt}
+
+% Source code
+\usepackage{listings}
+% Algorithm
+\usepackage[ruled,vlined]{algorithm2e}
+% Tree graph
+\usepackage{synttree}
+
+\usepackage{multirow}
+
+% Source code settings
+\lstloadlanguages{}
+\lstset{
+showstringspaces=false,              %% 设定是否显示代码之间的空格符号
+numbers=left,                        %% 在左边显示行号
+numberstyle=\tiny,                   %% 设定行号字体的大小
+basicstyle=\footnotesize,            %% 设定字体大小\tiny, \small, \Large等等
+keywordstyle=\color{blue!70}, commentstyle=\color{red!50!green!50!blue!50},
+                                     %% 关键字高亮
+frame=shadowbox,                     %% 给代码加框
+rulesepcolor=\color{red!20!green!20!blue!20},
+escapechar=`,                        %% 中文逃逸字符，用于中英混排
+xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+breaklines,                          %% 这条命令可以让LaTeX自动将长的代码行换行排版
+extendedchars=false                  %% 这一条命令可以解决代码跨页时，章节标题，页眉等汉字不显示的问题
+}

@@ -1,0 +1,2 @@
+/home/dy/tinker_vision/testpicture/object_rec/build/CMakeFiles/modelbuild.dir
+/home/dy/tinker_vision/testpicture/object_rec/build/CMakeFiles/object_classify.dir
